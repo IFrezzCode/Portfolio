@@ -1,0 +1,608 @@
+/*LadeBild*/
+
+#loadingText {
+	font-size: 2rem;
+	font-weight: bold;
+	text-align: center;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
+	z-index: 9999;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: black;
+	width: 100%;
+	height: 100%;
+}
+
+.loading {
+	visibility: hidden; /* Startet mit unsichtbarem Text */
+	position: absolute; /* Beide Texte an der gleichen Stelle */
+	animation: blinkText 1s steps(1) infinite; /* Wechseln alle 1s mit 0.5s Sichtbarkeit */
+}
+
+/* Erstes Wort (Portfolio) erscheint zuerst */
+#loadingText span:nth-child(1) {
+	animation-delay: 0s; /* Portfolio erscheint zuerst */
+}
+
+/* Zweites Wort (Kai Weber) erscheint nach 0.5s */
+#loadingText span:nth-child(2) {
+	animation-delay: 0.5s; /* Kai Weber erscheint nach 0.5s */
+}
+
+/* Abwechselndes Blinken */
+@keyframes blinkText {
+	0%,
+	100% {
+		visibility: hidden; /* Unsichtbar */
+	}
+	50% {
+		visibility: visible; /* Sichtbar */
+	}
+}
+
+/*General*/
+
+/* Headlines */
+h1 {
+	color: #000000;
+}
+
+h2,
+a,
+span,
+h3 {
+	font-family: "Anton", sans-serif;
+	letter-spacing: 0.1em;
+	font-size: 1, 5em;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	padding-left: 1em;
+	text-align: left;
+	font-style: bold;
+	color: #ffffff;
+}
+
+/* Restlicher Text */
+body,
+p,
+li,
+button {
+	font-family: "Roboto", sans-serif;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+/*Navigation*/
+
+.NaviElement:not(.active) a:hover {
+	background-color: rgb(0, 255, 0);
+	color: black;
+}
+
+.NaviBox {
+	display: flex;
+	flex-direction: row;
+	color: rgb(0, 0, 0);
+	width: fit-content;
+	border-style: solid;
+	position: fixed;
+	top: 0%;
+	right: 0%;
+	justify-content: space-evenly;
+	align-items: center;
+	z-index: 1000;
+	list-style-type: none;
+}
+
+nav ul {
+	position: sticky;
+	top: 0rem;
+	z-index: 1000;
+	list-style-type: none;
+}
+
+.NaviElement {
+	display: flex;
+	background-color: #ffffff;
+	color: #000000;
+	border-right: 1px solid black;
+}
+
+.NaviBar {
+	position: sticky;
+	top: 0;
+	z-index: 1000;
+	background-color: white;
+}
+
+.NaviElement:last-child {
+	border-right: none;
+}
+
+.NaviElement.active a {
+	background-color: black;
+	color: white;
+}
+
+.NaviElement a {
+	text-decoration: none;
+	color: black;
+	background-color: white;
+	height: 100%;
+	width: 100%;
+	display: block;
+	padding: 0.5rem 1rem;
+	border: none;
+	outline: none;
+	box-sizing: border-box;
+}
+/*Intro*/
+
+#Intro {
+	height: 200vh; /* genug Platz zum Scrollen */
+	position: relative;
+}
+
+#three-container {
+	position: sticky;
+	top: 0;
+	height: 100vh;
+	width: 100vw;
+}
+
+/*portfolio*/
+
+#typewriter {
+	font-size: 2vw;
+	color: #fff;
+	margin-top: 50px;
+	font-family: "Courier New", Courier, monospace;
+	text-align: left;
+	display: inline-block;
+}
+
+/* CSS für TypeIt Cursor */
+#typewriter .ti-cursor {
+	font-size: 2vw; /* Hier stellst du die Größe des Cursors ein */
+	color: rgb(0, 255, 0);
+	animation: blink 1s step-end infinite; /* Blinken des Cursors */
+}
+
+/* Blinkende Animation */
+@keyframes blink {
+	50% {
+		opacity: 0; /* Cursor verschwindet */
+	}
+}
+
+/* Schwarz als Hintergrund */
+
+#Portfollio {
+	background-color: black;
+	display: flex;
+	align-items: start; /* Text oben */
+	justify-content: center;
+	box-sizing: border-box;
+	padding-bottom: clamp(10rem, 2vw, 11rem);
+	padding-left: clamp(1rem, 1vw, 2rem);
+	width: 100vw;
+}
+
+/* Haupt-Layout: Bild & Text nebeneinander */
+.portfolioBox {
+	display: flex;
+	flex-direction: row;
+	width: 90vw;
+	height: auto;
+	gap: 5vw;
+	flex-wrap: nowrap; /* verhindert Umbruch */
+	max-width: 100vw;
+	overflow-x: hidden;
+	box-sizing: border-box;
+}
+
+/* Bild nimmt z.B. 40% der Breite */
+.imageBox {
+	flex-basis: 30vw;
+	flex-shrink: 0;
+}
+
+.kaiBild {
+	width: 30vw;
+	height: auto;
+	border-radius: 1rem;
+}
+
+/* Textbox nimmt 50% oder Rest der Breite */
+.textBox {
+	flex-basis: 50vw;
+	color: white;
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	font-size: 1.5vw; /* passt sich Bildschirmgröße an */
+	line-height: 1.4;
+	padding-top: 1vh;
+}
+
+/*Arbeiten*/
+
+@keyframes move {
+	to {
+		/* Move horizontally so that right edge is aligned against the viewport */
+		transform: translateX(calc(-100% + 100vw));
+	}
+}
+
+#Arbeiten {
+	/* Stretch it out, so that we create room for the horizontal scroll animation */
+	height: 500vh;
+	overflow: visible; /* To make position sticky work … */
+	background-color: #000000;
+
+	view-timeline-name: --section-pin-tl;
+	view-timeline-axis: block;
+}
+
+.ArbeitenWrapSticky {
+	/* Stick to Top */
+	height: 100vh;
+	width: 100vw;
+	position: sticky;
+	top: 0;
+
+	width: 100vw;
+	overflow-x: hidden;
+}
+
+.ArbeitenWrap {
+	height: 100vh;
+
+	width: calc(100vh * 6 * 1.1); /* 7 Bilder, je ca. 1.3 mal so breit wie hoch */
+
+	/* Hook animation */
+	will-change: transform;
+	animation: linear move forwards;
+
+	/* Link animation to view-timeline */
+	animation-timeline: --section-pin-tl;
+	animation-range: contain 0% contain 100%;
+}
+
+/* Gallery Logic */
+
+/* Gallery container: horizontal scroll area with snapping */
+.gallery {
+	/* Remove default list styling */
+	list-style-type: none;
+
+	/* Layout: arrange children in a horizontal row */
+	display: flex;
+	flex-flow: row nowrap;
+
+	/* Prevent scroll chaining when hitting scroll limits */
+	overscroll-behavior-x: none;
+
+	/* Enable scroll snapping on the horizontal axis */
+	scroll-snap-type: x mandatory;
+
+	/* Set a fixed height for the gallery */
+	height: 100vh;
+
+	/* Set a maximum height for the gallery */
+	max-height: 100vh;
+}
+
+/* Each gallery item (list element) */
+.galleryItem {
+	/* Keep item width based on content, prevent it from shrinking */
+	flex: 0 0 auto;
+
+	/* Match the height of the gallery container */
+	height: 100%;
+
+	/* Snap the start of each item into view when scrolling */
+	scroll-snap-align: start;
+
+	/* Ensure the scroll always stops on a snap point */
+	scroll-snap-stop: always;
+}
+
+/* Images inside each gallery item */
+.galleryItem img {
+	/* Eliminate space below the image caused by inline display */
+	display: block;
+
+	/* Make image fill the height of its container */
+	height: 100%;
+
+	/* Keep the image’s original aspect ratio */
+	width: auto;
+}
+
+/*Prozess*/
+
+.carousel {
+	background: black;
+	color: white;
+	width: 100vw;
+	min-height: 108vh;
+	max-height: 108vh;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	scroll-snap-align: start;
+}
+
+.carousel-slide {
+	display: none;
+	flex-direction: column; /* Standard ist Spaltenlayout für Flexbox */
+	align-items: center;
+	text-align: center;
+	padding: 2rem;
+	width: 100%;
+	overflow: hidden;
+}
+
+.carousel-slide.active {
+	display: flex;
+}
+
+.slide-header {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	justify-content: center;
+	margin-bottom: 5rem;
+	margin-top: 5rem;
+	width: 100%;
+}
+
+.slide-nav {
+	background: none;
+	border: none;
+	color: white;
+	font-size: 2rem;
+	cursor: pointer;
+}
+
+.slide-nav:hover {
+	color: rgb(0, 255, 0);
+}
+
+.carousel-content {
+	display: flex;
+	flex-direction: row; /* Hier sorgen wir dafür, dass Video und Text nebeneinander sind */
+	align-items: flex-start;
+	width: 100%;
+	max-width: 100vw; /* Verhindert, dass der gesamte Slide zu breit wird */
+}
+
+.media-container {
+	width: 50%;
+	height: clamp(10rem, 30vw, 50rem);
+	position: relative;
+	margin-right: 2rem;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.media-item {
+	display: none;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.media-item.active {
+	display: block;
+}
+
+.carousel-text {
+	max-width: 50vw; /* Maximalbreite für den Text-Container */
+	color: white;
+	text-align: left; /* Text ist linksbündig */
+	flex-grow: 1; /* Textcontainer kann den verfügbaren Platz ausfüllen */
+}
+
+.project-desc {
+	font-size: 2vw;
+	line-height: 1.6;
+	word-wrap: break-word; /* falls ein sehr langes Wort drin ist */
+	padding: 0 1.5rem; /* Rand links und rechts */
+	max-width: 100%; /* Text bleibt im Container */
+	box-sizing: border-box; /* padding zählt zur Gesamtbreite */
+	flex: 1;
+}
+
+.media-controls {
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	display: flex;
+	gap: 0.5rem;
+}
+
+.media-controls button {
+	color: white;
+	border: none;
+	padding: 0.5rem;
+	font-size: 1.5rem;
+	cursor: pointer;
+	background: none;
+}
+
+.media-controls button:hover {
+	color: rgb(0, 255, 0);
+}
+
+/*Kontakt*/
+
+#kontakt a:hover,
+#kontakt a:hover .email-text {
+	color: rgb(0, 255, 0);
+}
+
+#kontakt {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 100vh; /* Die Höhe der Sektion */
+	background-color: #000000;
+	color: white;
+}
+
+.left {
+	display: flex;
+	flex-direction: column; /* Spaltenlayout für den Text */
+	justify-content: center;
+	align-items: flex-start;
+	width: 30%; /* 50% für die linke Seite */
+}
+
+.left h2 {
+	font-size: clamp(2rem, 4.5vw, 2.5rem);
+	text-transform: uppercase;
+	line-height: 0.01; /* Weniger Abstand zwischen den Zeilen */
+	display: flex;
+	flex-direction: column; /* Buchstaben untereinander anzeigen */
+}
+
+.left h2 span {
+	display: block; /* Jeder Buchstabe wird in einem neuen Block angezeigt */
+	padding-left: 0%;
+}
+
+.right {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	width: 70%; /* 50% für die rechte Seite */
+	height: 100%;
+}
+
+.right p {
+	font-size: clamp(0, 8rem, 3vw, 4rem);
+}
+
+.email-text {
+	font-size: clamp(2rem, 5vw, 5rem);
+	font-weight: bold;
+	text-decoration: none;
+	color: white;
+}
+
+.mail-icon {
+	width: 30px;
+	height: 30px;
+	margin-left: 10px;
+	vertical-align: middle;
+}
+
+.mail-icon:hover {
+	transform: scale(1.1);
+	cursor: pointer;
+}
+
+a {
+	color: inherit; /* Erbt die Farbe von übergeordnetem Text */
+	text-decoration: none; /* Entfernt den Unterstrich vom Link */
+}
+
+/*End*/
+
+#end {
+	background-color: white;
+	color: black;
+	border-top: 2px solid black; /* obere schwarze Linie */
+	border-bottom: 2px solid black; /* optional: untere Linie */
+	padding: 20px 20px;
+	display: flex;
+	align-items: flex-start;
+	flex-wrap: nowrap;
+	font-family: sans-serif;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	overflow-x: auto;
+	gap: 1rem;
+}
+
+#end .box {
+	display: flex;
+	justify-content: flex-start; /* Links ausrichten */
+	flex-wrap: wrap;
+	gap: 1em; /* Abstand zwischen den Links */
+	flex-direction: row;
+}
+
+#end .box a {
+	text-decoration: none;
+	color: black;
+	font-weight: 500;
+	margin: 0 10px;
+	transition: color 0.2s ease;
+	font-size: clamp(0.8rem, 2vw, 1.5rem);
+}
+
+#end .box a:hover {
+	color: rgb(0, 255, 0);
+}
+
+#end .Logo {
+	height: 3em;
+	width: auto;
+}
+
+.endText {
+	color: #000000;
+	font-family: "Anton", sans-serif;
+	letter-spacing: 0.1em;
+	font-size: clamp(0.8rem, 2vw, 1.5rem);
+	padding-top: 1em;
+	padding-bottom: 1em;
+	text-align: left;
+	font-style: bold;
+	margin-left: 1rem;
+	white-space: nowrap;
+}
+
+.logoTextBox {
+	display: flex;
+	align-items: center;
+	gap: 0, 5rem; /* Abstand zwischen Logo und Text */
+}
+
+.box {
+	display: flex;
+	flex-direction: row; /* 👈 sorgt für horizontale Ausrichtung */
+	flex-wrap: nowrap; /* 👈 verhindert Zeilenumbruch */
+	gap: 1rem; /* Abstand zwischen den Links */
+	white-space: nowrap; /* 👈 verhindert Umbruch im Text */
+}
+
+.box a {
+	margin: 0; /* optional, falls du vorher margin hattest */
+	text-decoration: none;
+	color: black;
+	font-weight: 500;
+	transition: color 0.2s ease;
+}
