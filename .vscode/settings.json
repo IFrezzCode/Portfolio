@@ -1,0 +1,22 @@
+{
+	// Use prettier for formatting
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+
+	// Rename paired tags
+	"editor.linkedEditing": true,
+
+	// Format files when saving
+	"editor.formatOnSave": true,
+
+	// Save automatically for instant feedback
+	"files.autoSave": "afterDelay",
+	"files.autoSaveDelay": 1000,
+
+	// Enable HTML/JS tag autoclosing
+	"html.autoClosingTags": true,
+
+	// Prettier configuration (optional)
+	"prettier.singleQuote": true,
+	"prettier.semi": true,
+	"liveServer.settings.port": 5501
+}

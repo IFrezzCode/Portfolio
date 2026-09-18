@@ -1,0 +1,265 @@
+<!-- #region Dokumenteinstellungen -->
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Kai Weber</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="script.js?v=10"></script>
+  </head>
+  <!-- #endregion -->
+
+  <body class="home-page">
+    <!-- #region Hero -->
+    <section
+      id="ToolsMethods"
+      class="hero-scroll-stop"
+      aria-label="Tools & Methods"
+    >
+      <div class="hero">
+        <canvas class="hero-canvas" aria-hidden="true"></canvas>
+        <p class="hero-title">Portfolio<br />Kai Weber</p>
+        <div
+          class="hero-loader"
+          role="status"
+          aria-label="3D-Modell wird geladen"
+        >
+          <div class="loader" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+    <!-- #endregion -->
+
+    <!-- #region Navigation -->
+    <nav class="NaviBar">
+      <button class="MenuButton" aria-label="Menü öffnen">☰</button>
+      <ul class="NaviBox">
+        <li class="NaviElement active">
+          <a href="#skills"
+            ><span class="lang-de">Start</span
+            ><span class="lang-en">Home</span></a
+          >
+        </li>
+        <li class="NaviElement">
+          <a href="Projects.html"
+            ><span class="lang-de">Projekte</span
+            ><span class="lang-en">Projects</span></a
+          >
+        </li>
+        <li class="NaviElement">
+          <a href="SystemsValues.html"
+            ><span class="lang-de">Systeme & Werte</span
+            ><span class="lang-en">Systems & Values</span></a
+          >
+        </li>
+        <li class="NaviElement">
+          <a href="AboutMe.html"
+            ><span class="lang-de">Über mich</span
+            ><span class="lang-en">About Me</span></a
+          >
+        </li>
+        <li class="NaviElement language-switch" aria-label="Sprache auswählen">
+          <button id="lang-de" type="button" onclick="setLanguage('de')">
+            DE
+          </button>
+          <span aria-hidden="true">/</span>
+          <button id="lang-en" type="button" onclick="setLanguage('en')">
+            EN
+          </button>
+        </li>
+      </ul>
+    </nav>
+    <!-- #endregion -->
+
+    <!-- #region Integrated Design -->
+    <main id="skills" class="integrated-design">
+      <div class="integrated-design__content">
+        <h1 class="type-heading lang-de">Integriertes Design</h1>
+        <h1 class="type-heading lang-en">Integrated Design</h1>
+
+        <p class="type-body lang-de">
+          Ich verstehe Gestaltung nicht nur als Formgebung, sondern als
+          Auseinandersetzung mit ihrem sozialen, kulturellen und ökologischen
+          Kontext. Deshalb arbeite ich nicht innerhalb einer einzelnen
+          Disziplin, sondern wähle für jedes Projekt den Gestaltungsansatz, der
+          die Aufgabe am besten löst.
+        </p>
+        <p class="type-body lang-en">
+          I see design as more than shaping form. It is about engaging with its
+          social, cultural, ecological, and economic context. Rather than
+          working within a single discipline, I let each project determine the
+          design approach it requires.
+        </p>
+      </div>
+      <!-- #endregion -->
+
+      <!-- #region Arbeitsprozess -->
+      <section class="work-process" aria-labelledby="work-process-title-de">
+        <div class="work-process__backgrounds" aria-hidden="true">
+          <img
+            class="work-process__background is-active"
+            data-background-step="1"
+            src="assets/Bilder/Start/ausgangspunkt.jpg"
+            alt=""
+          />
+          <img
+            class="work-process__background"
+            data-background-step="2"
+            src="assets/Bilder/Start/analyse.jpeg"
+            alt=""
+          />
+          <img
+            class="work-process__background"
+            data-background-step="3"
+            src="assets/Bilder/Start/Konzept.png"
+            alt=""
+          />
+          <img
+            class="work-process__background"
+            data-background-step="4"
+            src="assets/Bilder/Start/Umsetzung.jpg"
+            alt=""
+          />
+          <img
+            class="work-process__background"
+            data-background-step="5"
+            src="assets/Bilder/Start/Projekte.jpg"
+            alt=""
+          />
+        </div>
+
+        <header class="work-process__header reveal-on-scroll">
+          <div>
+            <h2 id="work-process-title-de" class="type-heading lang-de">
+              Wie ich arbeite
+            </h2>
+            <h2 class="type-heading lang-en">How I Work</h2>
+          </div>
+        </header>
+
+        <div class="work-process__network">
+          <article class="work-step reveal-on-scroll" data-step="1">
+            <div class="work-step__node" aria-hidden="true"></div>
+            <h3 class="type-subheading lang-de">Ausgangspunkt</h3>
+            <h3 class="type-subheading lang-en">Starting Point</h3>
+            <div class="work-step__media" aria-hidden="true">
+              <!-- BILD-PLATZHALTER SCHRITT 01: Ausgangspunkt -->
+            </div>
+            <ul class="work-step__subpoints lang-de">
+              <li>Fragestellung</li>
+              <li>Bedarf</li>
+              <li>Kontext</li>
+              <li>Verantwortung</li>
+            </ul>
+            <ul class="work-step__subpoints lang-en">
+              <li>Question</li>
+              <li>Need</li>
+              <li>Context</li>
+              <li>Responsibility</li>
+            </ul>
+          </article>
+
+          <article class="work-step reveal-on-scroll" data-step="2">
+            <div class="work-step__node" aria-hidden="true"></div>
+            <h3 class="type-subheading lang-de">Analyse</h3>
+            <h3 class="type-subheading lang-en">Analysis</h3>
+            <div class="work-step__media" aria-hidden="true">
+              <!-- BILD-PLATZHALTER SCHRITT 02: Analyse -->
+            </div>
+            <ul class="work-step__subpoints lang-de">
+              <li>Nutzung</li>
+              <li>Bestehende Lösungen</li>
+              <li>Ressourcen</li>
+              <li>Lebenszyklus</li>
+              <li>Auswirkungen</li>
+            </ul>
+            <ul class="work-step__subpoints lang-en">
+              <li>Use</li>
+              <li>Existing solutions</li>
+              <li>Resources</li>
+              <li>Life cycle</li>
+              <li>Impacts</li>
+            </ul>
+          </article>
+
+          <article class="work-step reveal-on-scroll" data-step="3">
+            <div class="work-step__node" aria-hidden="true"></div>
+            <h3 class="type-subheading lang-de">Konzept</h3>
+            <h3 class="type-subheading lang-en">Concept</h3>
+            <div class="work-step__media" aria-hidden="true">
+              <!-- BILD-PLATZHALTER SCHRITT 03: Konzept -->
+            </div>
+            <ul class="work-step__subpoints lang-de">
+              <li>Idee</li>
+              <li>System</li>
+              <li>Material</li>
+              <li>Technologie</li>
+              <li>Experiment</li>
+              <li>Prototyp</li>
+            </ul>
+            <ul class="work-step__subpoints lang-en">
+              <li>Idea</li>
+              <li>System</li>
+              <li>Material</li>
+              <li>Technology</li>
+              <li>Experiment</li>
+              <li>Prototype</li>
+            </ul>
+          </article>
+
+          <article class="work-step reveal-on-scroll" data-step="4">
+            <div class="work-step__node" aria-hidden="true"></div>
+            <h3 class="type-subheading lang-de">Umsetzung</h3>
+            <h3 class="type-subheading lang-en">Realisation</h3>
+            <div class="work-step__media" aria-hidden="true">
+              <!-- BILD-PLATZHALTER SCHRITT 04: Umsetzung -->
+            </div>
+            <ul class="work-step__subpoints lang-de">
+              <li>Planung</li>
+              <li>Konstruktion</li>
+              <li>Fertigung – Handwerk</li>
+              <li>Test</li>
+            </ul>
+            <ul class="work-step__subpoints lang-en">
+              <li>Planning</li>
+              <li>Construction</li>
+              <li>Production – Craft</li>
+              <li>Testing</li>
+            </ul>
+          </article>
+
+          <article
+            class="work-step work-step--projects reveal-on-scroll"
+            data-step="5"
+          >
+            <a class="work-step__link" href="Projects.html">
+              <div class="work-step__node" aria-hidden="true"></div>
+              <h3 class="type-subheading lang-de">
+                Fertige Projekte <span aria-hidden="true">↗</span>
+              </h3>
+              <h3 class="type-subheading lang-en">
+                Finished Projects <span aria-hidden="true">↗</span>
+              </h3>
+            </a>
+          </article>
+        </div>
+      </section>
+      <!-- #endregion -->
+    </main>
+
+    <!-- #region Footer -->
+    <section id="end">
+      <div class="logoTextBox">
+        <img src="assets/Logo/kw26S.svg" alt="KW" class="Logo" />
+        <div class="endText">Made by Kai Weber</div>
+      </div>
+
+      <div class="box">
+        <a href="Impressum.html">Impressum</a>
+        <a href="Datenschutz.html">Datenschutz</a>
+      </div>
+    </section>
+    <!-- #endregion -->
+  </body>
+</html>

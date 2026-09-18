@@ -1,0 +1,7 @@
+{
+	"recommendations": [
+		"esbenp.prettier-vscode", // Code formatting
+		"EditorConfig.EditorConfig", // Code formatting
+		"ms-vscode.live-server" // Live preview of HTML pages
+	]
+}

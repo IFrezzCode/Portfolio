@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Kai Weber</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="script.js"></script>
+  </head>
+
+  <body>
+    <nav class="NaviBar">
+      <button class="MenuButton" type="button" aria-label="Navigation öffnen">
+        &#9776;
+      </button>
+      <ul class="NaviBox">
+        <li class="NaviElement">
+          <a href="index.html#skills"
+            ><span class="lang-de">Skills</span
+            ><span class="lang-en">Skills</span></a
+          >
+        </li>
+        <li class="NaviElement">
+          <a href="Projects.html"
+            ><span class="lang-de">Projekte</span
+            ><span class="lang-en">Projects</span></a
+          >
+        </li>
+        <li class="NaviElement">
+          <a href="SystemsValues.html"
+            ><span class="lang-de">Systeme & Werte</span
+            ><span class="lang-en">Systems & Values</span></a
+          >
+        </li>
+        <li class="NaviElement active">
+          <a href="AboutMe.html"
+            ><span class="lang-de">Über mich</span
+            ><span class="lang-en">About Me</span></a
+          >
+        </li>
+        <li class="NaviElement language-switch" aria-label="Sprache auswählen">
+          <button id="lang-de" type="button" onclick="setLanguage('de')">
+            DE
+          </button>
+          <span aria-hidden="true">/</span>
+          <button id="lang-en" type="button" onclick="setLanguage('en')">
+            EN
+          </button>
+        </li>
+      </ul>
+    </nav>
+
+    <main class="about">
+      <section class="about-intro">
+        <div class="about-image">
+          <img
+            src="assets/Bilder/ÜberMich/kaiBild.jpg"
+            alt="Portrait Kai Weber"
+          />
+        </div>
+
+        <div class="about-text">
+          <h1 class="type-heading lang-de">
+            Gestaltung zwischen Handwerk, Material und Systemen.
+          </h1>
+          <h1 class="type-heading lang-en">Test</h1>
+
+          <p class="type-body">
+            Mein Name ist Kai Weber und ich studiere Integriertes Design an der
+            Hochschule für Künste Bremen.
+          </p>
+
+          <p class="type-body">
+            Mein Weg zur Gestaltung begann im Handwerk. Durch meine Ausbildung
+            zum Maßschneider habe ich gelernt, Materialien, Konstruktionen und
+            Herstellungsprozesse genau zu verstehen.
+          </p>
+
+          <p class="type-body">
+            Heute verbinde ich dieses praktische Wissen mit Produktdesign,
+            digitalen Werkzeugen und systemischem Denken. Mich interessiert, wie
+            Produkte entstehen, wie sie genutzt werden und welchen Einfluss sie
+            über ihren gesamten Lebenszyklus haben.
+          </p>
+
+          <p class="type-body">
+            Meine Arbeit bewegt sich zwischen Gestaltung, Technologie und
+            traditionellen Herstellungsprozessen. Dabei suche ich nach Lösungen,
+            die funktional, langlebig und bewusst gestaltet sind.
+          </p>
+        </div>
+      </section>
+
+      <section class="about-details">
+        <div>
+          <h2 class="type-subheading">Education</h2>
+          <p class="type-body">
+            Integriertes Design<br />
+            Hochschule für Künste Bremen
+          </p>
+        </div>
+
+        <div>
+          <h2 class="type-subheading">Background</h2>
+          <p class="type-body">
+            Maßschneider Handwerk<br />
+            Produktdesign<br />
+            Materialexperimente
+          </p>
+        </div>
+
+        <div>
+          <h2 class="type-subheading">Interests</h2>
+          <p class="type-body">
+            Systems Design<br />
+            Circular Design<br />
+            Craft & Technology
+          </p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Kai Weber</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="script.js"></script>
+  </head>
+
+  <body>
+    <nav class="NaviBar">
+      <button class="MenuButton" type="button" aria-label="Navigation öffnen">
+        &#9776;
+      </button>
+      <ul class="NaviBox">
+        <li class="NaviElement">
+          <a href="index.html#skills"
+            ><span class="lang-de">Skills</span
+            ><span class="lang-en">Skills</span></a
+          >
+        </li>
+        <li class="NaviElement active">
+          <a href="Projects.html"
+            ><span class="lang-de">Projekte</span
+            ><span class="lang-en">Projects</span></a
+          >
+        </li>
+        <li class="NaviElement">
+          <a href="SystemsValues.html"
+            ><span class="lang-de">Systeme & Werte</span
+            ><span class="lang-en">Systems & Values</span></a
+          >
+        </li>
+        <li class="NaviElement">
+          <a href="AboutMe.html"
+            ><span class="lang-de">Über mich</span
+            ><span class="lang-en">About Me</span></a
+          >
+        </li>
+        <li class="NaviElement language-switch" aria-label="Sprache auswählen">
+          <button id="lang-de" type="button" onclick="setLanguage('de')">
+            DE
+          </button>
+          <span aria-hidden="true">/</span>
+          <button id="lang-en" type="button" onclick="setLanguage('en')">
+            EN
+          </button>
+        </li>
+      </ul>
+    </nav>
+
+    <ul class="projekt-liste">
+      <li class="projekt-item">
+        <details class="projekt">
+          <summary
+            data-hover-src="assets/Bilder/BaProjekt/blätterdachhover.jpg"
+          >
+            <div class="projekt-kopf">
+              <h2 class="type-heading">Blätterdach</h2>
+              <span>Juli 2026</span>
+            </div>
+          </summary>
+
+          <div class="projekt-slider" aria-label="Projektinhalte Blätterdach">
+            <div class="projekt-seiten">
+              <section class="projekt-seite" id="blaetterdach-seite-1">
+                <div class="projekt-content">
+                  <img
+                    src="assets/Bilder/BaProjekt/bondensetlicht.jpg"
+                    alt="Blätterdach als beleuchtetes Bodenmodul"
+                  />
+                  <div class="projekt-text">
+                    <p class="type-body lang-de">
+                      In meinem Bachelorvorhaben Keramische Übersetzung
+                      natürlicher Muster entwickelte ich ein modulares
+                      Lichtsystem, das sich frei im Raum einsetzen und erweitern
+                      lässt. Das fertige System heißt Blätterdach. Ziel war es,
+                      ein System zu entwerfen, das Nutzer/innen
+                      Gestaltungsfreiheit lässt und nicht vorgibt, wie oder wo
+                      es eingesetzt werden muss.
+                    </p>
+                    <p class="type-body lang-en">My Bachelor thesis ....</p>
+                  </div>
+                </div>
+                <a
+                  class="projekt-pfeil projekt-pfeil-rechts"
+                  href="#blaetterdach-seite-2"
+                  aria-label="Nächste Projektseite"
+                  >&#8594;</a
+                >
+              </section>
+
+              <section class="projekt-seite" id="blaetterdach-seite-2">
+                <div class="projekt-content">
+                  <img
+                    src="assets/Bilder/BaProjekt/wandsetmitelicht.jpg"
+                    alt="Blätterdach als beleuchtete Wandinstallation"
+                  />
+                  <div class="projekt-text">
+                    <p class="type-body lang-de">
+                      Die keramischen Module lassen sich zu unterschiedlichen
+                      Formationen verbinden. Dadurch kann Blätterdach als
+                      Wandinstallation, Raumobjekt oder Lichtquelle eingesetzt
+                      und an verschiedene Orte angepasst werden.
+                    </p>
+                    <p class="type-body lang-en">
+                      The ceramic modules can be combined into different
+                      formations and adapted to a variety of spaces.
+                    </p>
+                  </div>
+                </div>
+                <a
+                  class="projekt-pfeil projekt-pfeil-links"
+                  href="#blaetterdach-seite-1"
+                  aria-label="Vorherige Projektseite"
+                  >&#8592;</a
+                >
+                <a
+                  class="projekt-pfeil projekt-pfeil-rechts"
+                  href="#blaetterdach-seite-3"
+                  aria-label="Nächste Projektseite"
+                  >&#8594;</a
+                >
+              </section>
+
+              <section class="projekt-seite" id="blaetterdach-seite-3">
+                <div class="projekt-content">
+                  <img
+                    src="assets/Bilder/BaProjekt/grundsetlicht.jpg"
+                    alt="Beleuchtete Grundmodule von Blätterdach"
+                  />
+                  <div class="projekt-text">
+                    <p class="type-body lang-de">
+                      Licht, Material und Anordnung verändern die Wirkung des
+                      Systems. Die einzelnen Elemente bilden gemeinsam eine
+                      wachsende Struktur, ohne eine feste Endform vorzugeben.
+                    </p>
+                    <p class="type-body lang-en">
+                      Light, material and arrangement change the character of
+                      the system while its final form remains open.
+                    </p>
+                  </div>
+                </div>
+                <a
+                  class="projekt-pfeil projekt-pfeil-links"
+                  href="#blaetterdach-seite-2"
+                  aria-label="Vorherige Projektseite"
+                  >&#8592;</a
+                >
+              </section>
+            </div>
+
+            <div class="projekt-punkte" aria-hidden="true">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </details>
+      </li>
+
+      <li class="projekt-item">
+        <details class="projekt">
+          <summary>
+            <div class="projekt-kopf">
+              <h2 class="type-heading">Crafting identety</h2>
+              <span>Juni 2026</span>
+            </div>
+          </summary>
+
+          <div class="projekt-content">
+            <img
+              src="assets/Bilder/CraftinIdentity/Screenshot 2026-01-12 124941.png"
+              alt="Portfolio"
+            />
+
+            <div class="projekt-text">
+              <p class="type-body">Beschreibung...</p>
+            </div>
+          </div>
+        </details>
+      </li>
+
+      <li class="projekt-item">
+        <details class="projekt">
+          <summary>
+            <div class="projekt-kopf">
+              <h2 class="type-heading">Made to Measure</h2>
+              <span>Juni 2026</span>
+            </div>
+          </summary>
+
+          <div class="projekt-content">
+            <img src="bilder/portfolio.jpg" alt="Portfolio" />
+
+            <div class="projekt-text">
+              <p class="type-body">Beschreibung...</p>
+            </div>
+          </div>
+        </details>
+      </li>
+
+      <li class="projekt-item">
+        <details class="projekt">
+          <summary data-hover-src="assets/Bilder/NochEinProdukt/NochHover.jpg">
+            <div class="projekt-kopf">
+              <h2 class="type-heading">Noch ein Produkt?</h2>
+              <span>Juni 2026</span>
+            </div>
+          </summary>
+
+          <div class="projekt-content">
+            <img src="bilder/portfolio.jpg" alt="Portfolio" />
+
+            <div class="projekt-text">
+              <p class="type-body">Beschreibung...</p>
+            </div>
+          </div>
+        </details>
+      </li>
+
+      <li class="projekt-item">
+        <details class="projekt">
+          <summary data-hover-src="assets/Bilder/CraftAndRepair/CraftHover.jpg">
+            <div class="projekt-kopf">
+              <h2 class="type-heading">Craft and Repair</h2>
+              <span>Juni 2026</span>
+            </div>
+          </summary>
+
+          <div class="projekt-content">
+            <img src="bilder/portfolio.jpg" alt="Portfolio" />
+
+            <div class="projekt-text">
+              <p class="type-body">Beschreibung...</p>
+            </div>
+          </div>
+        </details>
+      </li>
+
+      <li class="projekt-item">
+        <details class="projekt">
+          <summary
+            data-hover-src="assets/Bilder/PerfektSilouette/PerfektHover.jpg"
+          >
+            <div class="projekt-kopf">
+              <h2 class="type-heading">Die Perfekte silouhette</h2>
+              <span>Juni 2026</span>
+            </div>
+          </summary>
+
+          <div class="projekt-content">
+            <img src="bilder/portfolio.jpg" alt="Portfolio" />
+
+            <div class="projekt-text">
+              <p class="type-body">Beschreibung...</p>
+            </div>
+          </div>
+        </details>
+      </li>
+
+      <li class="projekt-item">
+        <details class="projekt">
+          <summary
+            data-hover-src="assets/Bilder/Interloking Tableware/InterlookHover.jpg"
+          >
+            <div class="projekt-kopf">
+              <h2 class="type-heading">Interlooking Tableware</h2>
+              <span>Juni 2026</span>
+            </div>
+          </summary>
+
+          <div class="projekt-content">
+            <img src="bilder/portfolio.jpg" alt="Portfolio" />
+
+            <div class="projekt-text">
+              <p class="type-body">Beschreibung...</p>
+            </div>
+          </div>
+        </details>
+      </li>
+
+      <li class="projekt-item">
+        <details class="projekt">
+          <summary data-hover-src="assets/Bilder/MFE/mfeHover.jpg">
+            <div class="projekt-kopf">
+              <h2 class="type-heading">MFE</h2>
+              <span>Juni 2026</span>
+            </div>
+          </summary>
+
+          <div class="projekt-content">
+            <img src="bilder/portfolio.jpg" alt="Portfolio" />
+
+            <div class="projekt-text">
+              <p class="type-body">Beschreibung...</p>
+            </div>
+          </div>
+        </details>
+      </li>
+
+      <li class="projekt-item">
+        <details class="projekt">
+          <summary data-hover-src="assets/Bilder/StayHydrated/StayHover.jpg">
+            <div class="projekt-kopf">
+              <h2 class="type-heading">Stay hydrated</h2>
+              <span>Juni 2026</span>
+            </div>
+          </summary>
+
+          <div class="projekt-content">
+            <img src="bilder/portfolio.jpg" alt="Portfolio" />
+
+            <div class="projekt-text">
+              <p class="type-body">Beschreibung...</p>
+            </div>
+          </div>
+        </details>
+      </li>
+
+      <li class="projekt-item">
+        <details class="projekt">
+          <summary
+            data-hover-src="assets/Bilder/MaterialUndStruktur/MaterialHover.jpg"
+          >
+            <div class="projekt-kopf">
+              <h2 class="type-heading">Material und Struktur</h2>
+              <span>Juni 2026</span>
+            </div>
+          </summary>
+
+          <div class="projekt-content">
+            <img src="bilder/portfolio.jpg" alt="Portfolio" />
+
+            <div class="projekt-text">
+              <p class="type-body">Beschreibung...</p>
+            </div>
+          </div>
+        </details>
+      </li>
+
+      <li class="projekt-item">
+        <details class="projekt">
+          <summary data-hover-src="assets/Bilder/Hocker/HockerHover.jpg">
+            <div class="projekt-kopf">
+              <h2 class="type-heading">Hocker in 2 Wochen</h2>
+              <span>Juni 2026</span>
+            </div>
+          </summary>
+
+          <div class="projekt-content">
+            <img src="bilder/portfolio.jpg" alt="Portfolio" />
+
+            <div class="projekt-text">
+              <p class="type-body">Beschreibung...</p>
+            </div>
+          </div>
+        </details>
+      </li>
+
+      <li class="projekt-item">
+        <details class="projekt">
+          <summary data-hover-src="assets/Bilder/3dVerbindung/3dHover.jpg">
+            <div class="projekt-kopf">
+              <h2 class="type-heading">3d Verbindungen</h2>
+              <span>Juni 2026</span>
+            </div>
+          </summary>
+
+          <div class="projekt-content">
+            <img src="bilder/portfolio.jpg" alt="Portfolio" />
+
+            <div class="projekt-text">
+              <p class="type-body">Beschreibung...</p>
+            </div>
+          </div>
+        </details>
+      </li>
+    </ul>
+
+    <div class="projekt-hover-preview" aria-hidden="true">
+      <img src="" alt="" />
+    </div>
+  </body>
+</html>
